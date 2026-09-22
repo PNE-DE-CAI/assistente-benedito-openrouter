@@ -204,18 +204,18 @@ def responder_com_openrouter(pergunta, contexto):
     )
 
     cliente = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=chave,
-        default_headers={
-            "HTTP-Referer": st.secrets.get(
-                "SITE_URL",
-                "https://streamlit.app"
-            ),
-            "X-OpenRouter-Title": (
-                "Assistente Pedagógico Benedito"
-            )
-        }
-    )
+    base_url="https://openrouter.ai/api/v1",
+    api_key=chave,
+    default_headers={
+        "HTTP-Referer": st.secrets.get(
+            "SITE_URL",
+            "https://streamlit.app"
+        ),
+        "X-OpenRouter-Title": (
+            "Assistente Pedagogico Benedito"
+        )
+    }
+)
 
     mensagem_sistema = """
 Você é o Assistente Pedagógico da
